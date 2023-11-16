@@ -11,7 +11,7 @@ public class Main {
 
         // Get input
         final Scanner in = new Scanner(System.in);
-        StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
+        final StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
         in.close();
         // Get values from input
         while(st.hasMoreTokens()) {
@@ -19,7 +19,7 @@ public class Main {
         }
 
         // Save count
-        int count = integerList.size();
+        final int count = integerList.size();
         // Keep only unique values
         integerList = new ArrayList<>(new HashSet<>(integerList));
         // Sort in ascending order
