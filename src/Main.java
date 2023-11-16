@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        
+        // Choose task to run
         if (args.length > 0) {
             switch (args[0]) {
                 case "task1":
@@ -18,7 +18,6 @@ public class Main {
                     break;
             }
         }
-
     }
 
     private static void task1() {
@@ -26,7 +25,7 @@ public class Main {
 
         // Get input
         final Scanner in = new Scanner(System.in);
-        StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
+        final StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
         in.close();
         // Get values from input
         while(st.hasMoreTokens()) {
@@ -34,7 +33,7 @@ public class Main {
         }
 
         // Save count
-        int count = integerList.size();
+        final int count = integerList.size();
         // Keep only unique values
         integerList = new ArrayList<>(new HashSet<>(integerList));
         // Sort in ascending order
@@ -56,7 +55,7 @@ public class Main {
 
         // Get input
         final Scanner in = new Scanner(System.in);
-        StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
+        final StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
         in.close();
         // Get values from input
         while(st.hasMoreTokens()) {
@@ -81,7 +80,7 @@ public class Main {
     }
 
     private static void task3() {
-        Map<Integer, Set<Integer>> graph = new HashMap<>();
+        final Map<Integer, Set<Integer>> graph = new HashMap<>();
 
         // Read graph
         final Scanner in = new Scanner(System.in);
@@ -107,9 +106,9 @@ public class Main {
         in.close();
 
         // Find all disconnected graphs
-        int graphs = 0, vertices = graph.size();
-        Set<Integer> visited = new HashSet<>();
-        while (visited.size() != vertices) {
+        int graphs = 0;
+        final Set<Integer> visited = new HashSet<>();
+        while (visited.size() != graph.size()) {
             // Find unvisited vertex
             for (int v : graph.keySet()) {
                 if (!visited.contains(v)) {
