@@ -7,7 +7,7 @@ public class Main {
     }
 
     private static void task3() {
-        Map<Integer, Set<Integer>> graph = new HashMap<>();
+        final Map<Integer, Set<Integer>> graph = new HashMap<>();
 
         // Read graph
         final Scanner in = new Scanner(System.in);
@@ -33,9 +33,9 @@ public class Main {
         in.close();
 
         // Find all disconnected graphs
-        int graphs = 0, vertices = graph.size();
-        Set<Integer> visited = new HashSet<>();
-        while (visited.size() != vertices) {
+        int graphs = 0;
+        final Set<Integer> visited = new HashSet<>();
+        while (visited.size() != graph.size()) {
             // Find unvisited vertex
             for (int v : graph.keySet()) {
                 if (!visited.contains(v)) {
