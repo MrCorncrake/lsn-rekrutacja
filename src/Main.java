@@ -2,82 +2,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        
-        if (args.length > 0) {
-            switch (args[0]) {
-                case "task1":
-                    task1();
-                    break;
-                case "task2":
-                    task2();
-                    break;
-                case "task3":
-                    task3();
-                    break;
-                default:
-                    break;
-            }
-        }
-
-    }
-
-    private static void task1() {
-        List<Integer> integerList = new ArrayList<>();
-
-        // Get input
-        final Scanner in = new Scanner(System.in);
-        StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
-        in.close();
-        // Get values from input
-        while(st.hasMoreTokens()) {
-            integerList.add(Integer.parseInt(st.nextToken()));
-        }
-
-        // Save count
-        int count = integerList.size();
-        // Keep only unique values
-        integerList = new ArrayList<>(new HashSet<>(integerList));
-        // Sort in ascending order
-        Collections.sort(integerList);
-
-        // Print result
-        for (int i : integerList) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        System.out.println("count: " + count);
-        System.out.println("distinct: " + integerList.size());
-        System.out.println("min: " + integerList.get(0));
-        System.out.println("max: " + integerList.get(integerList.size() - 1));
-    }
-
-    private static void task2() {
-        List<Integer> integerList = new ArrayList<>();
-
-        // Get input
-        final Scanner in = new Scanner(System.in);
-        StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
-        in.close();
-        // Get values from input
-        while(st.hasMoreTokens()) {
-            integerList.add(Integer.parseInt(st.nextToken()));
-        }
-
-        // Sort values
-        Collections.sort(integerList);
-        // Find pairs that sum to 13
-        int sum, left = 0, right = integerList.size() - 1;
-        while (left != right) {
-            sum = integerList.get(left) + integerList.get(right);
-            if (sum == 13) {
-                System.out.println(integerList.get(left) + " " + integerList.get(right));
-                left++;
-            } else if (sum > 13) {
-                right--;
-            } else {
-                left++;
-            }
-        }
+        // Task 3
+        task3();
     }
 
     private static void task3() {

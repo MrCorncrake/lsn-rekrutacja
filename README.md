@@ -1,20 +1,14 @@
 # lsn-rekrutacja
 A solution to "Backend tasks" - the first part of the LSN recruitment process.
 
+This branch provides solution to Task 3
+
 ## Compilation
 ```
 javac -d . ./src/Main.java
 ```
 
-## Task 1
+## Run program
 ```
-java Main task1
-```
-## Task 2
-```
-java Main task2
-```
-## Task 3
-```
-java Main task3
+java Main
 ```
