@@ -11,7 +11,7 @@ public class Main {
 
         // Get input
         final Scanner in = new Scanner(System.in);
-        StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
+        final StringTokenizer st = new StringTokenizer(in.nextLine(), " ");
         in.close();
         // Get values from input
         while(st.hasMoreTokens()) {
