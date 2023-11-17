@@ -70,8 +70,11 @@ public class Main {
             sum = integerList.get(left) + integerList.get(right);
             if (sum == 13) {
                 System.out.println(integerList.get(left) + " " + integerList.get(right));
+                // Check for possible repetitions -> extra combinations
+                for (int i = right - 1; integerList.get(i) == integerList.get(right); i--) {
+                    System.out.println(integerList.get(left) + " " + integerList.get(i));
+                }
                 left++;
-                right--;
             } else if (sum > 13) {
                 right--;
             } else {
