@@ -71,6 +71,7 @@ public class Main {
             if (sum == 13) {
                 System.out.println(integerList.get(left) + " " + integerList.get(right));
                 left++;
+                right--;
             } else if (sum > 13) {
                 right--;
             } else {
